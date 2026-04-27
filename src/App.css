@@ -499,6 +499,17 @@ select {
   color: #f2f5fb;
 }
 
+.lockup {
+  display: flex;
+  align-items: center;
+}
+
+.brand-logo {
+  height: 44px;
+  width: auto;
+  display: block;
+}
+
 .landing-links,
 .landing-actions,
 .terminal-stats,
@@ -596,6 +607,10 @@ select {
   gap: 16px;
 }
 
+.art-panel {
+  overflow: hidden;
+}
+
 .terminal-top {
   display: flex;
   justify-content: space-between;
@@ -620,6 +635,18 @@ select {
 
 .panel-inner {
   padding: 14px;
+}
+
+.hero-art-wrap {
+  padding: 10px;
+  background: linear-gradient(180deg, rgba(255,255,255,.015), rgba(255,255,255,.005));
+}
+
+.hero-art {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 14px;
 }
 
 .landing-sections {

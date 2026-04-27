@@ -1,0 +1,109 @@
+<svg width="1200" height="760" viewBox="0 0 1200 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="760" rx="36" fill="#070B10"/>
+  <rect x="24" y="24" width="1152" height="712" rx="28" fill="url(#bg)" stroke="rgba(255,255,255,0.08)"/>
+  <rect x="56" y="56" width="180" height="648" rx="24" fill="#0D141C" stroke="rgba(216,186,118,0.18)"/>
+  <rect x="262" y="56" width="882" height="84" rx="22" fill="#0D141C" stroke="rgba(255,255,255,0.06)"/>
+  <rect x="262" y="164" width="560" height="310" rx="24" fill="#091018" stroke="rgba(255,255,255,0.06)"/>
+  <rect x="840" y="164" width="304" height="310" rx="24" fill="#0D141C" stroke="rgba(255,255,255,0.06)"/>
+  <rect x="262" y="498" width="560" height="206" rx="24" fill="#0D141C" stroke="rgba(255,255,255,0.06)"/>
+  <rect x="840" y="498" width="304" height="206" rx="24" fill="#0D141C" stroke="rgba(255,255,255,0.06)"/>
+
+  <text x="88" y="108" fill="#D8BA76" font-size="28" font-family="Inter, Arial" font-weight="700">LB</text>
+  <text x="88" y="146" fill="#EEF3FB" font-size="18" font-family="Inter, Arial" font-weight="600">Line Bible</text>
+  <text x="88" y="170" fill="#7F8CA5" font-size="12" font-family="Inter, Arial">SPORTS BETTING TERMINAL</text>
+
+  <rect x="84" y="212" width="124" height="42" rx="12" fill="url(#goldBtn)"/>
+  <text x="116" y="239" fill="#12161D" font-size="14" font-family="Inter, Arial" font-weight="700">Markets</text>
+  <rect x="84" y="268" width="124" height="42" rx="12" fill="#131B25" stroke="rgba(255,255,255,0.06)"/>
+  <text x="113" y="295" fill="#D6DEED" font-size="14" font-family="Inter, Arial">Portfolio</text>
+  <rect x="84" y="324" width="124" height="42" rx="12" fill="#131B25" stroke="rgba(255,255,255,0.06)"/>
+  <text x="99" y="351" fill="#D6DEED" font-size="14" font-family="Inter, Arial">Performance</text>
+  <rect x="84" y="380" width="124" height="42" rx="12" fill="#131B25" stroke="rgba(255,255,255,0.06)"/>
+  <text x="127" y="407" fill="#D6DEED" font-size="14" font-family="Inter, Arial">Alerts</text>
+
+  <text x="294" y="107" fill="#EEF3FB" font-size="30" font-family="Inter, Arial" font-weight="700">Pilot the market. Execute the best number.</text>
+  <text x="294" y="127" fill="#7F8CA5" font-size="13" font-family="Inter, Arial">A cockpit for line movement, alerts, CLV, and portfolio management.</text>
+
+  <rect x="936" y="82" width="88" height="34" rx="10" fill="#101823" stroke="rgba(36,201,151,0.16)"/>
+  <text x="962" y="104" fill="#24C997" font-size="13" font-family="Inter, Arial" font-weight="700">LIVE</text>
+  <rect x="1038" y="82" width="82" height="34" rx="10" fill="#101823" stroke="rgba(216,186,118,0.16)"/>
+  <text x="1059" y="104" fill="#D8BA76" font-size="13" font-family="Inter, Arial" font-weight="700">PRO</text>
+
+  <g opacity="0.35">
+    <path d="M286 427H798" stroke="rgba(255,255,255,0.06)"/>
+    <path d="M286 372H798" stroke="rgba(255,255,255,0.04)"/>
+    <path d="M286 317H798" stroke="rgba(255,255,255,0.04)"/>
+    <path d="M286 262H798" stroke="rgba(255,255,255,0.04)"/>
+    <path d="M340 186V452" stroke="rgba(255,255,255,0.04)"/>
+    <path d="M430 186V452" stroke="rgba(255,255,255,0.04)"/>
+    <path d="M520 186V452" stroke="rgba(255,255,255,0.04)"/>
+    <path d="M610 186V452" stroke="rgba(255,255,255,0.04)"/>
+    <path d="M700 186V452" stroke="rgba(255,255,255,0.04)"/>
+  </g>
+
+  <polyline points="290,398 360,370 430,384 500,335 570,312 640,278 710,296 790,228" fill="none" stroke="#D8BA76" stroke-width="4" stroke-linecap="round"/>
+  <polyline points="290,418 360,404 430,426 500,390 570,372 640,354 710,360 790,330" fill="none" stroke="#24C997" stroke-width="3" stroke-linecap="round" opacity="0.95"/>
+  <circle cx="790" cy="228" r="6" fill="#D8BA76"/>
+  <circle cx="790" cy="330" r="5" fill="#24C997"/>
+
+  <text x="288" y="198" fill="#7F8CA5" font-size="12" font-family="Inter, Arial">LINE MOVEMENT</text>
+  <text x="860" y="198" fill="#7F8CA5" font-size="12" font-family="Inter, Arial">WATCHLIST RADAR</text>
+  <text x="286" y="530" fill="#7F8CA5" font-size="12" font-family="Inter, Arial">BEST EXECUTION BOARD</text>
+  <text x="860" y="530" fill="#7F8CA5" font-size="12" font-family="Inter, Arial">SIGNALS</text>
+
+  <g>
+    <rect x="864" y="220" width="256" height="56" rx="14" fill="#131B25" stroke="rgba(255,255,255,0.05)"/>
+    <text x="884" y="243" fill="#EEF3FB" font-size="15" font-family="Inter, Arial" font-weight="600">Lakers @ Nuggets</text>
+    <text x="884" y="262" fill="#7F8CA5" font-size="12" font-family="Inter, Arial">LAL +3.5 · BetMGM</text>
+    <text x="1038" y="252" fill="#24C997" font-size="13" font-family="Inter, Arial" font-weight="700">+1.5 CLV</text>
+
+    <rect x="864" y="288" width="256" height="56" rx="14" fill="#131B25" stroke="rgba(255,255,255,0.05)"/>
+    <text x="884" y="311" fill="#EEF3FB" font-size="15" font-family="Inter, Arial" font-weight="600">Celtics @ Heat</text>
+    <text x="884" y="330" fill="#7F8CA5" font-size="12" font-family="Inter, Arial">Over 219.5 · FanDuel</text>
+    <text x="1054" y="320" fill="#D8BA76" font-size="13" font-family="Inter, Arial" font-weight="700">STEAM</text>
+
+    <rect x="864" y="356" width="256" height="56" rx="14" fill="#131B25" stroke="rgba(255,255,255,0.05)"/>
+    <text x="884" y="379" fill="#EEF3FB" font-size="15" font-family="Inter, Arial" font-weight="600">Chiefs @ Bills</text>
+    <text x="884" y="398" fill="#7F8CA5" font-size="12" font-family="Inter, Arial">Bills ML +112 · bet365</text>
+    <text x="1010" y="388" fill="#9DB1D2" font-size="13" font-family="Inter, Arial" font-weight="700">LAGGING LINE</text>
+  </g>
+
+  <g>
+    <rect x="286" y="552" width="512" height="42" rx="12" fill="#131B25" stroke="rgba(255,255,255,0.05)"/>
+    <text x="308" y="578" fill="#EEF3FB" font-size="14" font-family="Inter, Arial" font-weight="600">BetMGM</text>
+    <text x="442" y="578" fill="#D8BA76" font-size="14" font-family="Inter, Arial">Lakers +3.5</text>
+    <text x="606" y="578" fill="#EEF3FB" font-size="14" font-family="Inter, Arial">-100</text>
+    <text x="702" y="578" fill="#24C997" font-size="13" font-family="Inter, Arial">Best number</text>
+
+    <rect x="286" y="604" width="512" height="42" rx="12" fill="#131B25" stroke="rgba(255,255,255,0.05)"/>
+    <text x="308" y="630" fill="#EEF3FB" font-size="14" font-family="Inter, Arial" font-weight="600">bet365</text>
+    <text x="442" y="630" fill="#D8BA76" font-size="14" font-family="Inter, Arial">Bills ML</text>
+    <text x="606" y="630" fill="#EEF3FB" font-size="14" font-family="Inter, Arial">+112</text>
+    <text x="700" y="630" fill="#24C997" font-size="13" font-family="Inter, Arial">Top moneyline</text>
+  </g>
+
+  <g>
+    <circle cx="882" cy="574" r="28" fill="#101823" stroke="rgba(216,186,118,0.18)"/>
+    <circle cx="882" cy="574" r="18" fill="#131B25"/>
+    <text x="866" y="579" fill="#D8BA76" font-size="12" font-family="Inter, Arial" font-weight="700">LIVE</text>
+
+    <circle cx="968" cy="574" r="28" fill="#101823" stroke="rgba(36,201,151,0.18)"/>
+    <circle cx="968" cy="574" r="18" fill="#131B25"/>
+    <text x="952" y="579" fill="#24C997" font-size="12" font-family="Inter, Arial" font-weight="700">CLV</text>
+
+    <circle cx="1054" cy="574" r="28" fill="#101823" stroke="rgba(157,177,210,0.18)"/>
+    <circle cx="1054" cy="574" r="18" fill="#131B25"/>
+    <text x="1038" y="579" fill="#9DB1D2" font-size="12" font-family="Inter, Arial" font-weight="700">EDGE</text>
+  </g>
+
+  <defs>
+    <linearGradient id="bg" x1="600" y1="24" x2="600" y2="736" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0B1017"/>
+      <stop offset="1" stop-color="#070B10"/>
+    </linearGradient>
+    <linearGradient id="goldBtn" x1="146" y1="212" x2="146" y2="254" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D9BB7A"/>
+      <stop offset="1" stop-color="#B69558"/>
+    </linearGradient>
+  </defs>
+</svg>

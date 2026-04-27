@@ -8,7 +8,9 @@ export function LandingPage({ onEnterApp }: LandingPageProps) {
   return (
     <div className="landing-shell">
       <header className="landing-nav">
-        <div className="landing-brand">{brand.name.toUpperCase()}</div>
+        <div className="landing-brand lockup">
+          <img src="./line-bible-logo.svg" alt="Line Bible logo" className="brand-logo" />
+        </div>
         <nav className="landing-links">
           {appNav.slice(0, 4).map((item) => (
             <span key={item}>{item}</span>
@@ -37,7 +39,7 @@ export function LandingPage({ onEnterApp }: LandingPageProps) {
           </div>
         </div>
 
-        <div className="landing-terminal panel">
+        <div className="landing-terminal panel art-panel">
           <div className="terminal-top">
             <div>
               <p className="eyebrow">Live terminal</p>
@@ -53,14 +55,8 @@ export function LandingPage({ onEnterApp }: LandingPageProps) {
             <MiniStat label="CLV" value="+0.6" note="avg lifetime" positive />
           </div>
 
-          <div className="landing-chart panel-inner">
-            <svg viewBox="0 0 520 240" className="chart">
-              <line x1="24" y1="20" x2="24" y2="208" className="axis" />
-              <line x1="24" y1="208" x2="500" y2="208" className="axis" />
-              <polyline points="24,82 110,98 190,120 280,132 360,162 430,184 500,196" fill="none" stroke="#f0b90b" strokeWidth="4" />
-              <polyline points="24,174 110,152 190,180 280,188 360,156 430,128 500,108" fill="none" stroke="#0ddb8b" strokeWidth="4" />
-              <polyline points="24,190 110,185 190,180 280,160 360,166 430,178 500,182" fill="none" stroke="#4d7cff" strokeWidth="4" />
-            </svg>
+          <div className="hero-art-wrap panel-inner">
+            <img src="./cockpit-terminal-hero.svg" alt="Luxury sports betting cockpit terminal concept" className="hero-art" />
           </div>
         </div>
       </section>

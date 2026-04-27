@@ -1,0 +1,18 @@
+<svg width="320" height="96" viewBox="0 0 320 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="8" y="8" width="80" height="80" rx="20" fill="#0C121A" stroke="#D8BA76" stroke-opacity="0.4"/>
+  <rect x="20" y="20" width="56" height="56" rx="14" fill="url(#paint0_linear)" stroke="rgba(255,255,255,0.08)"/>
+  <path d="M34 58V34H42V51H58V58H34Z" fill="#F5E7C2"/>
+  <path d="M49 34H63C67.9706 34 72 38.0294 72 43V43C72 47.9706 67.9706 52 63 52H49V34Z" fill="#D8BA76" fill-opacity="0.9"/>
+  <path d="M116 38H129.2V68H146.8V78H116V38Z" fill="#EEF3FB"/>
+  <path d="M154.8 38H187.2V47.2H168V53.6H185.2V62.4H168V78H154.8V38Z" fill="#EEF3FB"/>
+  <path d="M195.2 38H210.6L225.8 78H212.2L209.8 71.2H195.2L192.8 78H180L195.2 38ZM202.4 50.2L198 63.2H206.8L202.4 50.2Z" fill="#EEF3FB"/>
+  <path d="M232.4 38H251.6C261.6 38 267.6 42.2 267.6 49.8C267.6 54.8 264.4 58.2 259.8 59.4C265.6 60.4 269.2 64.2 269.2 69.8C269.2 78.2 262.6 82 252.2 82H232.4V38ZM250.4 54.8C254.2 54.8 256 53.4 256 50.6C256 47.8 254 46.4 250.4 46.4H245.2V54.8H250.4ZM251.2 73.2C255 73.2 257.4 71.8 257.4 68.6C257.4 65.4 255.2 63.8 251.2 63.8H245.2V73.2H251.2Z" fill="#EEF3FB"/>
+  <path d="M277.2 38H290.4V78H277.2V38Z" fill="#EEF3FB"/>
+  <path d="M299.2 38H312.4V68H320V78H299.2V38Z" fill="#EEF3FB"/>
+  <defs>
+    <linearGradient id="paint0_linear" x1="48" y1="20" x2="48" y2="76" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1A2432"/>
+      <stop offset="1" stop-color="#0D141D"/>
+    </linearGradient>
+  </defs>
+</svg>
