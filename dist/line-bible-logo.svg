@@ -1,5 +1,22 @@
-<svg width="420" height="72" viewBox="0 0 420 72" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect x="1" y="1" width="418" height="70" rx="16" fill="#0D141D" stroke="rgba(216,186,118,0.18)"/>
-  <text x="32" y="46" fill="#EEF3FB" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700" letter-spacing="3.5">LINE BIBLE</text>
-  <circle cx="384" cy="36" r="6" fill="#D8BA76"/>
+<svg width="520" height="88" viewBox="0 0 520 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="1" y="1" width="518" height="86" rx="18" fill="url(#bg)" stroke="rgba(216,186,118,0.16)"/>
+  <line x1="34" y1="44" x2="118" y2="44" stroke="url(#goldLine)" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="402" y1="44" x2="486" y2="44" stroke="url(#goldLine2)" stroke-width="1.5" stroke-linecap="round"/>
+  <text x="142" y="39" fill="#D8BA76" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="600" letter-spacing="4">LINE</text>
+  <text x="142" y="60" fill="#F3F6FC" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="700" letter-spacing="6">BIBLE</text>
+  <circle cx="260" cy="18" r="2" fill="#D8BA76" fill-opacity="0.9"/>
+  <defs>
+    <linearGradient id="bg" x1="260" y1="0" x2="260" y2="88" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#111823"/>
+      <stop offset="1" stop-color="#0B1017"/>
+    </linearGradient>
+    <linearGradient id="goldLine" x1="34" y1="44" x2="118" y2="44" gradientUnits="userSpaceOnUse">
+      <stop stop-color="rgba(216,186,118,0)"/>
+      <stop offset="1" stop-color="#D8BA76"/>
+    </linearGradient>
+    <linearGradient id="goldLine2" x1="402" y1="44" x2="486" y2="44" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D8BA76"/>
+      <stop offset="1" stop-color="rgba(216,186,118,0)"/>
+    </linearGradient>
+  </defs>
 </svg>
