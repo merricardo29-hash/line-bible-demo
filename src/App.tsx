@@ -89,6 +89,14 @@ function App() {
             <h1>{activeSection}</h1>
           </div>
           <div className="topbar-actions">
+            <label className="topbar-dropdown">
+              <span>Section</span>
+              <select value={activeSection} onChange={(e) => setActiveSection(e.target.value)}>
+                {appNav.map((item) => (
+                  <option key={item} value={item}>{item}</option>
+                ))}
+              </select>
+            </label>
             <button className="signal-pill" onClick={() => setView('landing')}>Landing</button>
             <div className="signal-pill live">{sourceStatus?.usesOddsApi ? 'Real odds ready' : 'Kalshi direct on'}</div>
             <div className="signal-pill premium">{sourceStatus ? `${sourceStatus.counts.sportsbooks} books tracked` : 'Pro alerts'}</div>

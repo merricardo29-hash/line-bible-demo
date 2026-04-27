@@ -111,9 +111,9 @@ export function MarketsPage({
             <div className="hero-books">DraftKings · FanDuel · BetMGM · bet365 · Kalshi</div>
           </section>
 
-          <section className="panel filters terminal-filters">
-            <label>
-              Game
+          <section className="panel page-toolbar">
+            <label className="toolbar-field toolbar-wide">
+              <span>Game</span>
               <select value={selectedEventId} onChange={(e) => setSelectedEventId(e.target.value)}>
                 {events.map((item) => (
                   <option key={item.id} value={item.id}>
@@ -123,8 +123,8 @@ export function MarketsPage({
               </select>
             </label>
 
-            <label>
-              Market
+            <label className="toolbar-field">
+              <span>Market</span>
               <select value={selectedMarket} onChange={(e) => setSelectedMarket(e.target.value as MarketType)}>
                 {(['spread', 'moneyline', 'total'] as MarketType[]).map((market) => (
                   <option key={market} value={market}>
@@ -134,8 +134,8 @@ export function MarketsPage({
               </select>
             </label>
 
-            <label>
-              Side
+            <label className="toolbar-field">
+              <span>Side</span>
               <select value={selectedSide} onChange={(e) => setSelectedSide(e.target.value as OutcomeSide)}>
                 {availableSides.map((side) => (
                   <option key={side} value={side}>

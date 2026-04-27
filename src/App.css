@@ -108,6 +108,20 @@ body {
   gap: 10px;
 }
 
+.topbar-dropdown {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  color: #cfd7ea;
+}
+
+.topbar-dropdown span {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: #7e8aa1;
+}
+
 .nav-item {
   width: 100%;
   text-align: left;
@@ -430,11 +444,30 @@ body {
   gap: 14px;
 }
 
-.filters label {
+.filters label,
+.toolbar-field {
   display: flex;
   flex-direction: column;
   gap: 10px;
   color: #cfd7ea;
+}
+
+.page-toolbar {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) repeat(2, minmax(0, .75fr));
+  gap: 14px;
+  align-items: end;
+}
+
+.toolbar-field span {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #8693ab;
+}
+
+.toolbar-wide {
+  min-width: 0;
 }
 
 select {
@@ -890,6 +923,26 @@ select {
   .sidebar {
     position: static;
     min-height: auto;
+  }
+
+  .sidebar-nav,
+  .sidebar-card {
+    display: none;
+  }
+
+  .topbar-dropdown {
+    display: flex;
+    width: 100%;
+  }
+
+  .topbar-actions {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .page-toolbar {
+    grid-template-columns: 1fr;
   }
 
   .landing-copy h1 {
