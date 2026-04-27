@@ -5,6 +5,7 @@ import { LandingPage } from './LandingPage';
 import { appNav, brand } from './brand';
 import {
   AlertsPage,
+  GameDetailPage,
   MarketsPage,
   ParlayLabPage,
   PerformancePage,
@@ -103,6 +104,15 @@ function App() {
             selectedSide={selectedSide}
             setSelectedSide={setSelectedSide}
             availableSides={availableSides}
+            history={history}
+            bestLines={bestLines}
+          />
+        )}
+        {activeSection === 'Game Detail' && (
+          <GameDetailPage
+            event={event}
+            selectedMarket={selectedMarket}
+            selectedSide={selectedSide}
             history={history}
             bestLines={bestLines}
           />

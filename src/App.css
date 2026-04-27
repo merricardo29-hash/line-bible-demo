@@ -289,6 +289,12 @@ body {
   gap: 16px;
 }
 
+.game-detail-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) 360px;
+  gap: 16px;
+}
+
 .terminal-main,
 .terminal-rail {
   display: flex;
@@ -860,6 +866,7 @@ select {
   .tv-grid-top,
   .tv-grid-main,
   .market-terminal-grid,
+  .game-detail-grid,
   .terminal-bottom-grid,
   .parlay-grid,
   .landing-hero,

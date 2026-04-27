@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { formatLine, formatPrice, marketLabels } from './data';
 import { activeBets, settledBets } from './mockBets';
+import { executionLadder, premiumPropsPreview, signalLog } from './mockGameDetail';
 import { bestOpportunities, marketMovers, sportCategories } from './mockMarkets';
 import { performanceHistory, performanceWindows } from './mockPerformance';
 import { parlayCards } from './mockParlays';
@@ -262,6 +263,152 @@ export function MarketsPage({
                   </div>
                   <div className="table-meta">
                     <span>{item.move}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+        </div>
+      </section>
+    </>
+  );
+}
+
+export function GameDetailPage({
+  event,
+  selectedMarket,
+  selectedSide,
+  history,
+  bestLines,
+}: {
+  event: Event;
+  selectedMarket: MarketType;
+  selectedSide: OutcomeSide;
+  history: OddsSnapshot[];
+  bestLines: BestLineResult[];
+}) {
+  return (
+    <>
+      <section className="signal-strip">
+        {terminalSignals.map((item) => (
+          <div key={item.label} className={`signal-box tone-${item.tone}`}>
+            <span>{item.label}</span>
+            <strong>{item.value}</strong>
+          </div>
+        ))}
+      </section>
+
+      <section className="game-detail-grid">
+        <div className="terminal-main">
+          <section className="panel terminal-header">
+            <div>
+              <p className="eyebrow">game detail terminal</p>
+              <h2>{event.awayTeam} @ {event.homeTeam}</h2>
+              <p className="subtle">Chart-first execution page with line history, signals, best-book routing, and premium props preview.</p>
+            </div>
+            <div className="hero-books">{marketLabels[selectedMarket]} · {selectedSide}</div>
+          </section>
+
+          <section className="panel chart-panel chart-dominant">
+            <div className="panel-head">
+              <div>
+                <p className="eyebrow">line movement</p>
+                <h2>{marketLabels[selectedMarket]} history</h2>
+              </div>
+              <div className="chart-meta">Execution view</div>
+            </div>
+            <LineChart snapshots={history} usePriceAxis={selectedMarket === 'moneyline'} />
+          </section>
+
+          <section className="terminal-bottom-grid">
+            <section className="panel board-panel">
+              <div className="panel-head">
+                <div>
+                  <p className="eyebrow">execution ladder</p>
+                  <h2>Best book routing</h2>
+                </div>
+              </div>
+              <div className="opportunity-table dense-table">
+                {executionLadder.map((item) => (
+                  <div className={`table-row ${item.status === 'best' ? 'winner' : ''}`} key={item.book}>
+                    <div>
+                      <strong>{item.book}</strong>
+                      <p>{item.status === 'best' ? 'Best current execution' : 'Tracked market price'}</p>
+                    </div>
+                    <div className="table-meta">
+                      <span>{item.line}</span>
+                      <span className={item.status === 'best' ? 'positive' : ''}>{item.price}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </section>
+
+            <section className="panel board-panel">
+              <div className="panel-head">
+                <div>
+                  <p className="eyebrow">best line board</p>
+                  <h2>Current board snapshot</h2>
+                </div>
+              </div>
+              <div className="best-line-list">
+                {bestLines.map(({ bestSnapshot, rationale }, index) => (
+                  <div className={`line-card ${index === 0 ? 'winner' : ''}`} key={bestSnapshot.id}>
+                    <div>
+                      <strong>{bestSnapshot.sportsbook}</strong>
+                      <p>{rationale}</p>
+                    </div>
+                    <div className="line-values">
+                      <span>{formatLine(bestSnapshot.line)}</span>
+                      <span>{formatPrice(bestSnapshot.price)}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </section>
+          </section>
+        </div>
+
+        <div className="terminal-rail">
+          <section className="panel rail-panel">
+            <div className="panel-head">
+              <div>
+                <p className="eyebrow">signal log</p>
+                <h2>Tape</h2>
+              </div>
+            </div>
+            <div className="opportunity-table dense-table">
+              {signalLog.map((item) => (
+                <div className="table-row" key={`${item.time}-${item.label}`}>
+                  <div>
+                    <strong>{item.label}</strong>
+                    <p>{item.detail}</p>
+                  </div>
+                  <div className="table-meta">
+                    <span>{item.time}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <section className="panel rail-panel premium-panel">
+            <div className="panel-head">
+              <div>
+                <p className="eyebrow">premium</p>
+                <h2>Player Props 🔒</h2>
+              </div>
+            </div>
+            <div className="opportunity-table dense-table">
+              {premiumPropsPreview.map((item) => (
+                <div className="table-row" key={`${item.player}-${item.prop}`}>
+                  <div>
+                    <strong>{item.player}</strong>
+                    <p>{item.prop}</p>
+                  </div>
+                  <div className="table-meta">
+                    <span className="positive">{item.move}</span>
+                    <span>Locked</span>
                   </div>
                 </div>
               ))}

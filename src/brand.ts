@@ -15,6 +15,7 @@ export const brand = {
 
 export const appNav = [
   'Markets',
+  'Game Detail',
   'Portfolio',
   'Performance',
   'Alerts',
