@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import './App.css';
-import { fetchBestLines, fetchBootstrap, fetchHistory } from './api';
+import { fetchBestLines, fetchBootstrap, fetchHistory, fetchSourceStatus, type SourceStatus } from './api';
 import { LandingPage } from './LandingPage';
 import { appNav, brand } from './brand';
 import {
@@ -19,6 +19,7 @@ function App() {
   const [activeSection, setActiveSection] = useState('Markets');
   const [sportsbooks, setSportsbooks] = useState<SportsbookMeta[]>([]);
   const [events, setEvents] = useState<Event[]>([]);
+  const [sourceStatus, setSourceStatus] = useState<SourceStatus | null>(null);
   const [selectedEventId, setSelectedEventId] = useState('');
   const [selectedMarket, setSelectedMarket] = useState<MarketType>('spread');
   const [selectedSide, setSelectedSide] = useState<OutcomeSide>('away');
@@ -31,6 +32,7 @@ function App() {
       setEvents(data.events);
       setSelectedEventId(data.events[0]?.id ?? '');
     });
+    fetchSourceStatus().then(setSourceStatus);
   }, []);
 
   useEffect(() => {
@@ -88,8 +90,8 @@ function App() {
           </div>
           <div className="topbar-actions">
             <button className="signal-pill" onClick={() => setView('landing')}>Landing</button>
-            <div className="signal-pill live">Live market</div>
-            <div className="signal-pill premium">Pro alerts</div>
+            <div className="signal-pill live">{sourceStatus?.usesOddsApi ? 'Real odds ready' : 'Kalshi direct on'}</div>
+            <div className="signal-pill premium">{sourceStatus ? `${sourceStatus.counts.sportsbooks} books tracked` : 'Pro alerts'}</div>
           </div>
         </header>
 
