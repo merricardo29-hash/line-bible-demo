@@ -19,4 +19,5 @@ export const appNav = [
   'Performance',
   'Alerts',
   'Screeners',
+  'Parlay Lab',
 ];

@@ -283,6 +283,33 @@ body {
   gap: 16px;
 }
 
+.parlay-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.parlay-card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.parlay-confidence {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.008));
+  border: 1px solid rgba(255,255,255,.04);
+}
+
+.parlay-confidence strong {
+  color: #d8ba76;
+}
+
 .left-rail,
 .right-rail {
   display: flex;
@@ -747,6 +774,7 @@ select {
   .main-grid,
   .tv-grid-top,
   .tv-grid-main,
+  .parlay-grid,
   .landing-hero,
   .landing-sections,
   .landing-feature-grid,

@@ -6,6 +6,7 @@ import { appNav, brand } from './brand';
 import {
   AlertsPage,
   MarketsPage,
+  ParlayLabPage,
   PerformancePage,
   PortfolioPage,
   ScreenersPage,
@@ -110,6 +111,7 @@ function App() {
         {activeSection === 'Performance' && <PerformancePage />}
         {activeSection === 'Alerts' && <AlertsPage />}
         {activeSection === 'Screeners' && <ScreenersPage />}
+        {activeSection === 'Parlay Lab' && <ParlayLabPage />}
 
         <section className="panel footer-strip">
           <div className="mini-books">

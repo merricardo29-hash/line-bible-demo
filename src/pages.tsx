@@ -2,6 +2,7 @@ import { formatLine, formatPrice, marketLabels } from './data';
 import { activeBets, settledBets } from './mockBets';
 import { bestOpportunities, marketMovers, sportCategories } from './mockMarkets';
 import { performanceHistory, performanceWindows } from './mockPerformance';
+import { parlayCards } from './mockParlays';
 import { screenerRows, terminalSignals, watchlistRows } from './mockTerminal';
 import type { BestLineResult, Event, MarketType, OddsSnapshot, OutcomeSide } from './types';
 
@@ -404,6 +405,66 @@ export function ScreenersPage() {
         </div>
       </section>
     </section>
+  );
+}
+
+export function ParlayLabPage() {
+  return (
+    <>
+      <section className="stats-grid">
+        <StatCard label="Curated parlays" value="4" detail="2-leg and 3-leg builds" tone="gold" />
+        <StatCard label="Model stance" value="Signal-backed" detail="Not marketed as locks" tone="blue" />
+        <StatCard label="Focus" value="High conviction" detail="Line movement + stats + roster" tone="green" />
+        <StatCard label="Premium" value="Parlay Lab" detail="Daily curated builds" tone="purple" />
+      </section>
+
+      <section className="panel hero-panel">
+        <div>
+          <p className="eyebrow">parlay lab</p>
+          <h2>Signal-backed 2-leg and 3-leg builds</h2>
+          <p className="subtle">Built from line movement, team rates, current player form, and roster context — not lottery-ticket nonsense.</p>
+        </div>
+      </section>
+
+      <section className="parlay-grid">
+        {parlayCards.map((parlay) => (
+          <div className={`panel parlay-card ${parlay.style}`} key={parlay.title}>
+            <div className="panel-head">
+              <div>
+                <p className="eyebrow">{parlay.style}</p>
+                <h2>{parlay.title}</h2>
+              </div>
+              <div className="table-meta">
+                <span>{parlay.combinedOdds}</span>
+                <span className={parlay.risk === 'low' ? 'positive' : parlay.risk === 'high' ? 'negative' : ''}>{parlay.risk} risk</span>
+              </div>
+            </div>
+
+            <div className="parlay-confidence">
+              <span>Confidence</span>
+              <strong>{parlay.confidence}/100</strong>
+            </div>
+
+            <p className="subtle">{parlay.rationale}</p>
+
+            <div className="opportunity-table">
+              {parlay.legs.map((leg) => (
+                <div className="table-row" key={leg.label}>
+                  <div>
+                    <strong>{leg.label}</strong>
+                    <p>{leg.book}</p>
+                  </div>
+                  <div className="table-meta">
+                    <span>{leg.odds}</span>
+                    <span className="positive">{leg.signal}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </section>
+    </>
   );
 }
 
