@@ -179,6 +179,7 @@ body {
 .topbar-actions {
   display: flex;
   gap: 10px;
+  align-items: center;
 }
 
 .signal-pill {
@@ -186,6 +187,7 @@ body {
   font-size: 0.82rem;
   color: #cfd7e8;
   background: linear-gradient(180deg, rgba(20,26,36,.98), rgba(13,18,27,.98));
+  white-space: nowrap;
 }
 
 .live {
@@ -705,6 +707,7 @@ select {
 
 .landing-links {
   color: #96a2bf;
+  flex-wrap: wrap;
 }
 
 .landing-cta,
@@ -923,11 +926,23 @@ select {
   .sidebar {
     position: static;
     min-height: auto;
+    padding: 14px;
   }
 
   .sidebar-nav,
-  .sidebar-card {
+  .sidebar-card,
+  .landing-links,
+  .luxury-strip {
     display: none;
+  }
+
+  .topbar {
+    padding: 14px 16px;
+    margin-bottom: 14px;
+  }
+
+  .topbar h1 {
+    font-size: 1.5rem;
   }
 
   .topbar-dropdown {
@@ -939,13 +954,128 @@ select {
     width: 100%;
     flex-direction: column;
     align-items: stretch;
+    gap: 8px;
+  }
+
+  .signal-pill {
+    width: 100%;
+    text-align: center;
   }
 
   .page-toolbar {
     grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .panel,
+  .signal-pill,
+  .mini-book,
+  .topbar {
+    border-radius: 14px;
+  }
+
+  .landing-shell,
+  .app-shell {
+    padding: 16px;
+  }
+
+  .landing-nav {
+    padding: 14px 16px;
+    margin-bottom: 16px;
   }
 
   .landing-copy h1 {
-    font-size: 2.8rem;
+    font-size: 2.2rem;
+    margin-bottom: 12px;
+  }
+
+  .landing-subtext {
+    font-size: 0.98rem;
+    line-height: 1.5;
+  }
+
+  .landing-actions {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .landing-cta,
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    text-align: center;
+  }
+
+  .luxury-note {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    padding: 9px 12px;
+  }
+
+  .feature-card,
+  .mini-stat,
+  .landing-block,
+  .category-card,
+  .table-row,
+  .line-card,
+  .bet-row,
+  .settled-row {
+    padding: 14px;
+  }
+
+  .terminal-top,
+  .panel-head,
+  .line-card,
+  .table-row,
+  .bet-row,
+  .settled-row {
+    gap: 10px;
+  }
+
+  .table-row,
+  .line-card,
+  .bet-row,
+  .settled-row,
+  .terminal-header,
+  .hero-panel,
+  .panel-head {
+    align-items: flex-start;
+  }
+
+  .table-row,
+  .line-card,
+  .bet-row,
+  .settled-row,
+  .terminal-header {
+    flex-direction: column;
+  }
+
+  .table-meta,
+  .line-values,
+  .bet-metrics,
+  .settled-metrics {
+    width: 100%;
+    align-items: flex-start;
+  }
+
+  .signal-strip {
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+
+  .stats-grid,
+  .performance-grid,
+  .tv-grid-top,
+  .market-terminal-grid,
+  .game-detail-grid,
+  .terminal-bottom-grid,
+  .parlay-grid,
+  .landing-sections {
+    gap: 12px;
+  }
+
+  .mini-books {
+    justify-content: center;
   }
 }

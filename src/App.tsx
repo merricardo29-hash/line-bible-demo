@@ -118,7 +118,7 @@ function App() {
             bestLines={bestLines}
           />
         )}
-        {activeSection === 'Game Detail' && (
+        {activeSection === 'Game' && (
           <GameDetailPage
             event={event}
             selectedMarket={selectedMarket}
@@ -131,7 +131,7 @@ function App() {
         {activeSection === 'Performance' && <PerformancePage />}
         {activeSection === 'Alerts' && <AlertsPage />}
         {activeSection === 'Screeners' && <ScreenersPage />}
-        {activeSection === 'Parlay Lab' && <ParlayLabPage />}
+        {activeSection === 'Parlays' && <ParlayLabPage />}
 
         <section className="panel footer-strip">
           <div className="mini-books">

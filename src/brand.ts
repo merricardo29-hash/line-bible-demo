@@ -15,10 +15,10 @@ export const brand = {
 
 export const appNav = [
   'Markets',
-  'Game Detail',
+  'Game',
   'Portfolio',
   'Performance',
   'Alerts',
   'Screeners',
-  'Parlay Lab',
+  'Parlays',
 ];
