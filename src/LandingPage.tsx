@@ -15,7 +15,6 @@ export function LandingPage({ onEnterApp }: LandingPageProps) {
             <span key={item}>{item}</span>
           ))}
         </nav>
-        <button className="landing-cta" onClick={onEnterApp}>Open Terminal</button>
       </header>
 
       <section className="landing-hero">
