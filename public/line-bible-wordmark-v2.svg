@@ -1,0 +1,31 @@
+<svg width="560" height="96" viewBox="0 0 560 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="1" y="1" width="558" height="94" rx="18" fill="url(#bg)" stroke="rgba(216,186,118,0.12)"/>
+
+  <g transform="translate(26 22)">
+    <rect x="0" y="0" width="64" height="52" rx="12" fill="#121925" stroke="rgba(216,186,118,0.22)"/>
+    <path d="M14 13.5C14 10.4624 16.4624 8 19.5 8H46C49.3137 8 52 10.6863 52 14V39C52 42.3137 49.3137 45 46 45H19.5C16.4624 45 14 42.5376 14 39.5V13.5Z" fill="#0D141D" stroke="rgba(255,255,255,0.06)"/>
+    <path d="M20 13H25V41H20C17.7909 41 16 39.2091 16 37V17C16 14.7909 17.7909 13 20 13Z" fill="#D8BA76" fill-opacity="0.95"/>
+    <path d="M30 19H45" stroke="#EEF3FB" stroke-opacity="0.85" stroke-width="2" stroke-linecap="round"/>
+    <path d="M30 25H43" stroke="#EEF3FB" stroke-opacity="0.75" stroke-width="2" stroke-linecap="round"/>
+    <path d="M30 31H45" stroke="#EEF3FB" stroke-opacity="0.75" stroke-width="2" stroke-linecap="round"/>
+    <rect x="28" y="35" width="18" height="6" rx="3" fill="#24C997" fill-opacity="0.9"/>
+    <text x="31.5" y="39.6" fill="#071018" font-family="Inter, Arial, sans-serif" font-size="4.8" font-weight="800" letter-spacing="0.8">ODDS</text>
+  </g>
+
+  <text x="112" y="58" fill="#F3F6FC" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="800" letter-spacing="4.5">LINE BIBLE</text>
+
+  <line x1="112" y1="24" x2="228" y2="24" stroke="url(#goldLineLeft)" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="112" y1="72" x2="228" y2="72" stroke="url(#goldLineLeft)" stroke-width="1.5" stroke-linecap="round"/>
+  <circle cx="518" cy="48" r="5" fill="#D8BA76" fill-opacity="0.9"/>
+
+  <defs>
+    <linearGradient id="bg" x1="280" y1="0" x2="280" y2="96" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#111823"/>
+      <stop offset="1" stop-color="#0B1017"/>
+    </linearGradient>
+    <linearGradient id="goldLineLeft" x1="112" y1="24" x2="228" y2="24" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D8BA76" stop-opacity="0"/>
+      <stop offset="1" stop-color="#D8BA76"/>
+    </linearGradient>
+  </defs>
+</svg>

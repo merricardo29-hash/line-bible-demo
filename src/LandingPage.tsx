@@ -9,7 +9,7 @@ export function LandingPage({ onEnterApp }: LandingPageProps) {
     <div className="landing-shell">
       <header className="landing-nav">
         <div className="landing-brand lockup">
-          <img src="./line-bible-logo.svg" alt="Line Bible logo" className="brand-logo" />
+          <img src="./line-bible-wordmark-v2.svg" alt="Line Bible logo" className="brand-logo" />
         </div>
         <nav className="landing-links">
           {appNav.slice(0, 4).map((item) => (
