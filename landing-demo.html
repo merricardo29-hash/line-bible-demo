@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Line Bible Landing Demo</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, sans-serif;
+      color: #f5f7ff;
+      background:
+        radial-gradient(circle at top left, rgba(240,185,11,.14), transparent 24%),
+        radial-gradient(circle at 80% 10%, rgba(74,124,255,.16), transparent 28%),
+        linear-gradient(180deg, #090d14 0%, #101722 100%);
+    }
+    .wrap { max-width: 1400px; margin: 0 auto; padding: 24px; }
+    .nav, .hero-card, .panel, .feature { background: rgba(16,23,34,.88); border: 1px solid rgba(255,255,255,.07); border-radius: 20px; backdrop-filter: blur(12px); }
+    .nav { display:flex; justify-content:space-between; align-items:center; padding:18px 22px; margin-bottom:22px; }
+    .brand { font-weight:800; letter-spacing:.08em; color:#f0b90b; }
+    .nav-links { display:flex; gap:24px; color:#96a2bf; }
+    .cta { background:#f0b90b; color:#111; padding:12px 18px; border-radius:12px; font-weight:700; }
+    .hero { display:grid; grid-template-columns: 1.2fr .9fr; gap:20px; align-items:stretch; }
+    .hero-copy { padding:24px 6px; }
+    .eyebrow { color:#f0b90b; text-transform:uppercase; letter-spacing:.14em; font-size:.76rem; }
+    h1 { font-size:64px; line-height:1.02; margin:12px 0 16px; max-width:760px; }
+    .sub { color:#9aa7c3; font-size:18px; max-width:700px; line-height:1.6; }
+    .buttons { display:flex; gap:14px; margin-top:26px; }
+    .btn1, .btn2 { padding:14px 18px; border-radius:14px; font-weight:700; }
+    .btn1 { background:#f0b90b; color:#111; }
+    .btn2 { border:1px solid rgba(255,255,255,.11); color:#e8edf8; }
+    .hero-card { padding:20px; display:flex; flex-direction:column; gap:14px; }
+    .stats { display:grid; grid-template-columns:repeat(2,1fr); gap:12px; }
+    .panel { padding:16px; }
+    .stat-label { color:#7f8aa3; font-size:.76rem; text-transform:uppercase; letter-spacing:.12em; }
+    .stat-value { font-size:30px; font-weight:800; margin:10px 0 4px; }
+    .green { color:#0ddb8b; }
+    .main { display:grid; grid-template-columns: 1.1fr .9fr; gap:20px; margin-top:24px; }
+    .chartbox { padding:20px; }
+    .fakechart { height:290px; border-radius:16px; background: linear-gradient(180deg, rgba(240,185,11,.04), transparent 35%), #0a1018; position:relative; overflow:hidden; }
+    .gridline { position:absolute; left:0; right:0; height:1px; background:rgba(255,255,255,.07); }
+    .line1, .line2, .line3 { position:absolute; inset:0; }
+    svg { width:100%; height:100%; }
+    .rightcol { display:flex; flex-direction:column; gap:20px; }
+    .feature-grid { display:grid; grid-template-columns: repeat(2,1fr); gap:16px; margin-top:20px; }
+    .feature { padding:18px; }
+    .muted { color:#97a3bf; }
+    @media (max-width: 1000px) {
+      .hero, .main, .feature-grid { grid-template-columns:1fr; }
+      h1 { font-size:46px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="nav">
+      <div class="brand">LINE BIBLE</div>
+      <div class="nav-links"><span>Markets</span><span>Portfolio</span><span>Performance</span><span>Alerts</span></div>
+      <div class="cta">Go Pro</div>
+    </div>
+
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow">Binance energy · Coinbase premium depth</div>
+        <h1>The trading terminal for sports bettors.</h1>
+        <div class="sub">Track live line movement across major books, shop the best number, monitor your bets like positions, and get premium alerts when the market moves.</div>
+        <div class="buttons">
+          <div class="btn1">Start Free</div>
+          <div class="btn2">See Pro Features</div>
+        </div>
+        <div class="feature-grid">
+          <div class="feature"><strong>Best Line Screen</strong><div class="muted">Compare 5 books instantly</div></div>
+          <div class="feature"><strong>Trading-Style Charts</strong><div class="muted">Opening vs current vs closing</div></div>
+          <div class="feature"><strong>Bet Portfolio</strong><div class="muted">Track CLV, P&L, ROI</div></div>
+          <div class="feature"><strong>Pro Alerts</strong><div class="muted">Target number + steam move alerts</div></div>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="stats">
+          <div class="panel"><div class="stat-label">Books</div><div class="stat-value">5</div><div class="muted">DK · FD · MGM · 365 · Kalshi</div></div>
+          <div class="panel"><div class="stat-label">Live Alerts</div><div class="stat-value green">24</div><div class="muted">Triggered today</div></div>
+          <div class="panel"><div class="stat-label">Tracked P&L</div><div class="stat-value green">+$1,948</div><div class="muted">Lifetime</div></div>
+          <div class="panel"><div class="stat-label">CLV</div><div class="stat-value green">+0.6</div><div class="muted">Lifetime avg</div></div>
+        </div>
+        <div class="chartbox panel">
+          <div class="stat-label">Market Movers</div>
+          <div class="fakechart">
+            <div class="gridline" style="top:20%"></div>
+            <div class="gridline" style="top:40%"></div>
+            <div class="gridline" style="top:60%"></div>
+            <div class="gridline" style="top:80%"></div>
+            <svg viewBox="0 0 500 290" preserveAspectRatio="none">
+              <polyline points="0,80 90,110 180,130 260,145 340,170 420,210 500,220" fill="none" stroke="#f0b90b" stroke-width="4"/>
+              <polyline points="0,170 90,150 180,190 260,200 340,155 420,135 500,112" fill="none" stroke="#0ddb8b" stroke-width="4"/>
+              <polyline points="0,210 90,200 180,198 260,175 340,182 420,200 500,206" fill="none" stroke="#4d7cff" stroke-width="4"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="main">
+      <div class="panel" style="padding:22px;">
+        <div class="stat-label">Why it wins</div>
+        <h2 style="margin:10px 0 14px; font-size:34px;">A serious interface for serious bettors.</h2>
+        <div class="sub">Not a generic odds site. More like a market terminal: line shopping, movement tracking, position management, and premium analytics in one dark, sharp workspace.</div>
+      </div>
+      <div class="panel" style="padding:22px;">
+        <div class="stat-label">Premium features</div>
+        <h2 style="margin:10px 0 14px; font-size:34px;">Alerts. Performance. Edge.</h2>
+        <div class="sub">Full history, target-line alerts, steam move detection, bankroll analytics, CLV tracking, props, and advanced market screeners.</div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
