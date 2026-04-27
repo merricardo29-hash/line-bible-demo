@@ -14,6 +14,13 @@ body {
     radial-gradient(circle at top left, rgba(196, 167, 108, 0.06), transparent 20%),
     radial-gradient(circle at 80% 0%, rgba(75, 103, 150, 0.08), transparent 24%),
     linear-gradient(180deg, #06080d 0%, #0a0e14 100%);
+  background-image:
+    radial-gradient(circle at top left, rgba(196, 167, 108, 0.06), transparent 20%),
+    radial-gradient(circle at 80% 0%, rgba(75, 103, 150, 0.08), transparent 24%),
+    url('./premium-grid.svg'),
+    linear-gradient(180deg, #06080d 0%, #0a0e14 100%);
+  background-size: auto, auto, cover, auto;
+  background-attachment: fixed;
 }
 
 .trading-shell {
@@ -502,12 +509,31 @@ select {
 .lockup {
   display: flex;
   align-items: center;
+  gap: 14px;
 }
 
 .brand-logo {
   height: 44px;
   width: auto;
   display: block;
+}
+
+.brand-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.brand-meta strong {
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+}
+
+.brand-meta span {
+  color: #92a0b8;
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
 }
 
 .landing-links,
@@ -517,6 +543,31 @@ select {
 .landing-feature-grid {
   display: flex;
   gap: 14px;
+}
+
+.luxury-note {
+  margin-top: 18px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(216,186,118,.12);
+  background: linear-gradient(180deg, rgba(216,186,118,.06), rgba(216,186,118,.02));
+  color: #c4d0e2;
+  font-size: 0.88rem;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  display: inline-block;
+}
+
+.status-dot.gold {
+  background: #d8ba76;
+  box-shadow: 0 0 12px rgba(216,186,118,.55);
 }
 
 .landing-links {
@@ -649,6 +700,20 @@ select {
   border-radius: 14px;
 }
 
+.luxury-strip {
+  margin-top: 22px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.luxury-mark {
+  width: 74px;
+  height: 74px;
+  border-radius: 18px;
+  flex: 0 0 auto;
+}
+
 .landing-sections {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -710,7 +775,8 @@ select {
 
   .hero-panel,
   .topbar,
-  .landing-nav {
+  .landing-nav,
+  .luxury-strip {
     flex-direction: column;
     align-items: flex-start;
     gap: 12px;

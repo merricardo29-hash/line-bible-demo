@@ -10,6 +10,10 @@ export function LandingPage({ onEnterApp }: LandingPageProps) {
       <header className="landing-nav">
         <div className="landing-brand lockup">
           <img src="./line-bible-logo.svg" alt="Line Bible logo" className="brand-logo" />
+          <div className="brand-meta">
+            <strong>{brand.name}</strong>
+            <span>{brand.descriptor}</span>
+          </div>
         </div>
         <nav className="landing-links">
           {appNav.slice(0, 4).map((item) => (
@@ -29,6 +33,11 @@ export function LandingPage({ onEnterApp }: LandingPageProps) {
           <div className="landing-actions">
             <button className="btn-primary" onClick={onEnterApp}>See the dashboard</button>
             <button className="btn-secondary">View Pro features</button>
+          </div>
+
+          <div className="luxury-note">
+            <span className="status-dot gold" />
+            Night-flight cockpit luxury · precision instruments · premium market intelligence
           </div>
 
           <div className="landing-feature-grid">
@@ -76,6 +85,14 @@ export function LandingPage({ onEnterApp }: LandingPageProps) {
           <p className="subtle">
             Full history, target-line alerts, bankroll analytics, props, advanced screeners, and performance tracking like a trading platform.
           </p>
+        </div>
+      </section>
+
+      <section className="luxury-strip panel">
+        <img src="./line-bible-mark.svg" alt="Line Bible mark" className="luxury-mark" />
+        <div>
+          <p className="eyebrow">Brand signature</p>
+          <h2>Luxury aviation mood. Professional market terminal discipline.</h2>
         </div>
       </section>
     </div>
