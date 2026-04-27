@@ -509,31 +509,12 @@ select {
 .lockup {
   display: flex;
   align-items: center;
-  gap: 14px;
 }
 
 .brand-logo {
   height: 44px;
   width: auto;
   display: block;
-}
-
-.brand-meta {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-
-.brand-meta strong {
-  font-size: 0.95rem;
-  letter-spacing: 0.02em;
-}
-
-.brand-meta span {
-  color: #92a0b8;
-  font-size: 0.74rem;
-  text-transform: uppercase;
-  letter-spacing: 0.14em;
 }
 
 .landing-links,
