@@ -710,6 +710,10 @@ select {
   flex-wrap: wrap;
 }
 
+.single-cta-row {
+  display: flex;
+}
+
 .landing-cta,
 .btn-primary,
 .btn-secondary {
@@ -931,9 +935,25 @@ select {
 
   .sidebar-nav,
   .sidebar-card,
-  .landing-links,
   .luxury-strip {
     display: none;
+  }
+
+  .landing-links {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+    gap: 8px;
+    color: #d0d8e8;
+    font-size: 0.82rem;
+    text-align: center;
+  }
+
+  .landing-links span {
+    padding: 10px 8px;
+    border-radius: 10px;
+    background: rgba(255,255,255,.03);
+    border: 1px solid rgba(255,255,255,.05);
   }
 
   .topbar {

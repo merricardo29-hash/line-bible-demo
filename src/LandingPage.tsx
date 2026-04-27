@@ -1,4 +1,3 @@
-import { appNav } from './brand';
 
 interface LandingPageProps {
   onEnterApp: () => void;
@@ -12,11 +11,11 @@ export function LandingPage({ onEnterApp }: LandingPageProps) {
           <img src="./line-bible-wordmark-v2.svg" alt="Line Bible logo" className="brand-logo" />
         </div>
         <nav className="landing-links">
-          {appNav.slice(0, 4).map((item) => (
+          {['Markets', 'Game', 'Portfolio', 'Performance'].map((item) => (
             <span key={item}>{item}</span>
           ))}
         </nav>
-        <button className="landing-cta" onClick={onEnterApp}>Open Dashboard</button>
+        <button className="landing-cta" onClick={onEnterApp}>Open Terminal</button>
       </header>
 
       <section className="landing-hero">
@@ -26,9 +25,8 @@ export function LandingPage({ onEnterApp }: LandingPageProps) {
           <p className="landing-subtext">
             Shop the best line. Track movement. Bet smarter.
           </p>
-          <div className="landing-actions">
+          <div className="landing-actions single-cta-row">
             <button className="btn-primary" onClick={onEnterApp}>Open terminal</button>
-            <button className="btn-secondary">See Pro</button>
           </div>
 
           <div className="luxury-note">
