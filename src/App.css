@@ -296,6 +296,38 @@ body {
   gap: 14px;
 }
 
+.mode-tabs {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.mode-tab {
+  border: 1px solid rgba(255,255,255,.06);
+  background: rgba(255,255,255,.02);
+  color: #d5ddef;
+  padding: 10px 14px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.mode-tab.active {
+  background: linear-gradient(180deg, rgba(216,186,118,.12), rgba(216,186,118,.04));
+  border-color: rgba(216,186,118,.18);
+  color: #f4f7fc;
+}
+
+.premium-badge {
+  margin-left: auto;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, rgba(216,186,118,.12), rgba(216,186,118,.04));
+  color: #d8ba76;
+  font-size: 0.8rem;
+  border: 1px solid rgba(216,186,118,.14);
+}
+
 .parlay-confidence {
   display: flex;
   justify-content: space-between;
@@ -308,6 +340,13 @@ body {
 
 .parlay-confidence strong {
   color: #d8ba76;
+}
+
+.premium-module {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 4px;
 }
 
 .left-rail,

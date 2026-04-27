@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { formatLine, formatPrice, marketLabels } from './data';
 import { activeBets, settledBets } from './mockBets';
 import { bestOpportunities, marketMovers, sportCategories } from './mockMarkets';
@@ -409,6 +410,9 @@ export function ScreenersPage() {
 }
 
 export function ParlayLabPage() {
+  const [mode, setMode] = useState<'conservative' | 'balanced' | 'aggressive'>('conservative');
+  const filtered = parlayCards.filter((parlay) => parlay.style === mode);
+
   return (
     <>
       <section className="stats-grid">
@@ -426,8 +430,15 @@ export function ParlayLabPage() {
         </div>
       </section>
 
+      <section className="mode-tabs panel">
+        <button className={`mode-tab ${mode === 'conservative' ? 'active' : ''}`} onClick={() => setMode('conservative')}>Safe</button>
+        <button className={`mode-tab ${mode === 'balanced' ? 'active' : ''}`} onClick={() => setMode('balanced')}>Balanced</button>
+        <button className={`mode-tab ${mode === 'aggressive' ? 'active' : ''}`} onClick={() => setMode('aggressive')}>Aggressive</button>
+        <div className="premium-badge">Premium</div>
+      </section>
+
       <section className="parlay-grid">
-        {parlayCards.map((parlay) => (
+        {filtered.map((parlay) => (
           <div className={`panel parlay-card ${parlay.style}`} key={parlay.title}>
             <div className="panel-head">
               <div>
@@ -460,6 +471,48 @@ export function ParlayLabPage() {
                   </div>
                 </div>
               ))}
+            </div>
+
+            <div className="premium-module">
+              <div className="panel-head">
+                <div>
+                  <p className="eyebrow">premium</p>
+                  <h2>Why this parlay qualifies</h2>
+                </div>
+              </div>
+              <div className="opportunity-table">
+                {parlay.reasons.map((reason) => (
+                  <div className="table-row" key={reason.label}>
+                    <div>
+                      <strong>{reason.label}</strong>
+                      <p>{reason.detail}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="premium-module">
+              <div className="panel-head">
+                <div>
+                  <p className="eyebrow">premium</p>
+                  <h2>Best book execution</h2>
+                </div>
+              </div>
+              <div className="opportunity-table">
+                {parlay.execution.map((item) => (
+                  <div className="table-row" key={item.leg}>
+                    <div>
+                      <strong>{item.leg}</strong>
+                      <p>{item.note}</p>
+                    </div>
+                    <div className="table-meta">
+                      <span>{item.bestBook}</span>
+                      <span className="positive">{item.bestOdds}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         ))}
