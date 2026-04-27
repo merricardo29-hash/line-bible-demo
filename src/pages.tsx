@@ -99,36 +99,18 @@ export function MarketsPage({
         </section>
       </section>
 
-      <section className="tv-grid-main">
-        <div className="left-rail">
-          <section className="panel hero-panel">
+      <section className="market-terminal-grid">
+        <div className="terminal-main">
+          <section className="panel terminal-header">
             <div>
-              <p className="eyebrow">markets</p>
-              <h2>TradingView-style market discovery</h2>
-              <p className="subtle">Scan sports, spot movers, then drill into the line board and chart.</p>
+              <p className="eyebrow">market terminal</p>
+              <h2>{event.awayTeam} @ {event.homeTeam}</h2>
+              <p className="subtle">Binance-style execution screen for line movement, best price, and signal alignment.</p>
             </div>
             <div className="hero-books">DraftKings · FanDuel · BetMGM · bet365 · Kalshi</div>
           </section>
 
-          <section className="panel category-panel">
-            <div className="panel-head">
-              <div>
-                <p className="eyebrow">by sport</p>
-                <h2>Market categories</h2>
-              </div>
-            </div>
-            <div className="category-grid">
-              {sportCategories.map((item) => (
-                <div className="category-card" key={item.name}>
-                  <strong>{item.name}</strong>
-                  <span>{item.games} games</span>
-                  <small>{item.booksLive} books live</small>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          <section className="panel filters">
+          <section className="panel filters terminal-filters">
             <label>
               Game
               <select value={selectedEventId} onChange={(e) => setSelectedEventId(e.target.value)}>
@@ -163,50 +145,70 @@ export function MarketsPage({
             </label>
           </section>
 
-          <section className="panel chart-panel">
+          <section className="panel chart-panel chart-dominant">
             <div className="panel-head">
               <div>
                 <p className="eyebrow">line chart</p>
-                <h2>{event.awayTeam} @ {event.homeTeam}</h2>
+                <h2>{marketLabels[selectedMarket]} movement</h2>
               </div>
-              <div className="chart-meta">{marketLabels[selectedMarket]} · {selectedSide}</div>
+              <div className="chart-meta">{selectedSide} · live execution view</div>
             </div>
             <LineChart snapshots={history} usePriceAxis={selectedMarket === 'moneyline'} />
           </section>
 
-          <section className="panel board-panel">
-            <div className="panel-head">
-              <div>
-                <p className="eyebrow">comparison board</p>
-                <h2>Book-by-book best line</h2>
-              </div>
-            </div>
-            <div className="best-line-list">
-              {bestLines.map(({ bestSnapshot, rationale }, index) => (
-                <div className={`line-card ${index === 0 ? 'winner' : ''}`} key={bestSnapshot.id}>
-                  <div>
-                    <strong>{bestSnapshot.sportsbook}</strong>
-                    <p>{rationale}</p>
-                  </div>
-                  <div className="line-values">
-                    <span>{formatLine(bestSnapshot.line)}</span>
-                    <span>{formatPrice(bestSnapshot.price)}</span>
-                  </div>
+          <section className="terminal-bottom-grid">
+            <section className="panel board-panel">
+              <div className="panel-head">
+                <div>
+                  <p className="eyebrow">line ladder</p>
+                  <h2>Best book execution</h2>
                 </div>
-              ))}
-            </div>
+              </div>
+              <div className="best-line-list">
+                {bestLines.map(({ bestSnapshot, rationale }, index) => (
+                  <div className={`line-card ${index === 0 ? 'winner' : ''}`} key={bestSnapshot.id}>
+                    <div>
+                      <strong>{bestSnapshot.sportsbook}</strong>
+                      <p>{rationale}</p>
+                    </div>
+                    <div className="line-values">
+                      <span>{formatLine(bestSnapshot.line)}</span>
+                      <span>{formatPrice(bestSnapshot.price)}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </section>
+
+            <section className="panel category-panel">
+              <div className="panel-head">
+                <div>
+                  <p className="eyebrow">sports</p>
+                  <h2>Market categories</h2>
+                </div>
+              </div>
+              <div className="category-grid compact-categories">
+                {sportCategories.map((item) => (
+                  <div className="category-card" key={item.name}>
+                    <strong>{item.name}</strong>
+                    <span>{item.games} games</span>
+                    <small>{item.booksLive} books live</small>
+                  </div>
+                ))}
+              </div>
+            </section>
           </section>
         </div>
 
-        <div className="right-rail">
-          <section className="panel">
+        <div className="terminal-rail">
+          <section className="panel rail-panel">
             <div className="panel-head">
               <div>
                 <p className="eyebrow">watchlist</p>
                 <h2>Radar</h2>
               </div>
             </div>
-            <div className="opportunity-table">
+            <div className="opportunity-table dense-table">
               {watchlistRows.map((item) => (
                 <div className="table-row" key={`${item.game}-${item.market}`}>
                   <div>
@@ -222,14 +224,14 @@ export function MarketsPage({
             </div>
           </section>
 
-          <section className="panel">
+          <section className="panel rail-panel">
             <div className="panel-head">
               <div>
-                <p className="eyebrow">screeners</p>
-                <h2>Operator tools</h2>
+                <p className="eyebrow">operator tools</p>
+                <h2>Screeners</h2>
               </div>
             </div>
-            <div className="opportunity-table">
+            <div className="opportunity-table dense-table">
               {screenerRows.map((item) => (
                 <div className="table-row" key={item.label}>
                   <div>
@@ -238,6 +240,28 @@ export function MarketsPage({
                   </div>
                   <div className="table-meta">
                     <span>{item.count}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <section className="panel rail-panel">
+            <div className="panel-head">
+              <div>
+                <p className="eyebrow">market movers</p>
+                <h2>Fast tape</h2>
+              </div>
+            </div>
+            <div className="opportunity-table dense-table">
+              {marketMovers.map((item) => (
+                <div className="table-row" key={`${item.game}-${item.market}`}>
+                  <div>
+                    <strong>{item.game}</strong>
+                    <p>{item.market}</p>
+                  </div>
+                  <div className="table-meta">
+                    <span>{item.move}</span>
                   </div>
                 </div>
               ))}

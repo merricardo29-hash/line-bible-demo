@@ -283,6 +283,52 @@ body {
   gap: 16px;
 }
 
+.market-terminal-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.9fr) 360px;
+  gap: 16px;
+}
+
+.terminal-main,
+.terminal-rail {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.terminal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.terminal-filters {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.chart-dominant .chart {
+  min-height: 420px;
+}
+
+.terminal-bottom-grid {
+  display: grid;
+  grid-template-columns: 1.2fr .8fr;
+  gap: 16px;
+}
+
+.rail-panel {
+  min-height: 0;
+}
+
+.dense-table .table-row {
+  padding-top: 11px;
+  padding-bottom: 11px;
+}
+
+.compact-categories {
+  grid-template-columns: repeat(2, 1fr);
+}
+
 .parlay-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -813,12 +859,15 @@ select {
   .main-grid,
   .tv-grid-top,
   .tv-grid-main,
+  .market-terminal-grid,
+  .terminal-bottom-grid,
   .parlay-grid,
   .landing-hero,
   .landing-sections,
   .landing-feature-grid,
   .terminal-stats,
-  .category-grid {
+  .category-grid,
+  .compact-categories {
     grid-template-columns: 1fr;
   }
 
