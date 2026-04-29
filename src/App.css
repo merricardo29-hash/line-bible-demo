@@ -1079,13 +1079,25 @@ select {
     align-items: flex-start;
   }
 
-  .signal-strip {
+  .signal-strip,
+  .stats-grid,
+  .performance-grid {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(220px, 82%);
+    overflow-x: auto;
     gap: 10px;
     margin-bottom: 10px;
+    padding-bottom: 4px;
+    scroll-snap-type: x proximity;
   }
 
-  .stats-grid,
-  .performance-grid,
+  .signal-strip > *,
+  .stats-grid > *,
+  .performance-grid > * {
+    scroll-snap-align: start;
+  }
+
   .tv-grid-top,
   .market-terminal-grid,
   .game-detail-grid,
@@ -1093,6 +1105,33 @@ select {
   .parlay-grid,
   .landing-sections {
     gap: 12px;
+  }
+
+  .panel-head h2,
+  .terminal-top h2,
+  .landing-block h2,
+  .hero-panel h2,
+  .terminal-header h2 {
+    font-size: 1.05rem;
+    line-height: 1.2;
+  }
+
+  .subtle,
+  .line-card p,
+  .table-row p,
+  .bet-row p,
+  .settled-row p {
+    font-size: 0.88rem;
+    line-height: 1.4;
+  }
+
+  .eyebrow,
+  .brand-kicker {
+    font-size: 0.62rem;
+  }
+
+  .hero-books {
+    font-size: 0.84rem;
   }
 
   .mini-books {
